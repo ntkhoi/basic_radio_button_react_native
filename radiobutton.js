@@ -14,18 +14,13 @@ class RadioButton extends React.Component {
     this.state = {
       isSelected: this.props.isSelected,
       
-    };
-
-    console.log("call contructer");
-
-    
+    };    
   }
   static defaultProps = {
       isSelected: false,
       
   }
  _changeRadioState(){           
-     console.log("this.props.onPress(this.props.index) ;" + this.props.index);
     this.props.onPress(this.props.index) ;
 
     this.setState({
@@ -33,16 +28,13 @@ class RadioButton extends React.Component {
     })
  }
  componentWillReceiveProps(){
-     console.log(this.props.isSelected + "componentWillReceiveProps");
     this.setState({
         isSelected: this.props.isSelected
     })
  }
  
  render() {
-     console.log( "render radio nutton: " + this.state.isSelected);
     return (
-        
         <TouchableOpacity onPress={() => this._changeRadioState()}>
             <View style={[{
                 height: 24,
@@ -91,8 +83,6 @@ _radioButtonPress(index){
 }
 
 _renderRadioBtn(obj, i) {
-    
-   console.log( this.state.is_active_at_index + "")
     return (
       <RadioButton
             key={i}
@@ -105,7 +95,6 @@ _renderRadioBtn(obj, i) {
   }
 
   render() {
-    console.log("rerender");
     var render_content = false;
     if (this.props.radio_props.length) {
       render_content = this.props.radio_props.map(this._renderRadioBtn)
