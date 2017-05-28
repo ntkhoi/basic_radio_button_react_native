@@ -79,7 +79,7 @@ class RadioControl extends React.Component {
     this._renderRadioBtn = this._renderRadioBtn.bind(this)
   }
   static defaultProps = {
-      radio_props: [1,2,3,4],
+      radio_props: [],
       index_active: 0,
   }
  

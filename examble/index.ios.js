@@ -12,7 +12,7 @@ import {
   View
 } from 'react-native';
 
-import RadioButton from './radiobutton.js'
+import RadioButton from './radiocontrol.js'
 
 export default class dustin_radio_button extends Component {
   render() {
@@ -21,7 +21,7 @@ export default class dustin_radio_button extends Component {
         <Text style={styles.welcome}>
           Welcome to React Native!
         </Text>
-        <RadioButton> </RadioButton>
+        <RadioButton radio_props={[1,2,3,4,5,6,1,2,3,4,5,6]} />
       </View>
     );
   }
