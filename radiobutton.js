@@ -78,7 +78,7 @@ class RadioControl extends React.Component {
 _radioButtonPress(index){
    
    this.setState({is_active_at_index: index}, function () {
-    this.setState({})
+    this.forceUpdate();
     });
 }
 

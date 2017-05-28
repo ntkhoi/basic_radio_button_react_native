@@ -14,7 +14,7 @@ class RadioButton extends React.Component {
     this.state = {
       isSelected: this.props.isSelected,
       
-    };
+    };    
   }
   static defaultProps = {
       isSelected: false,
@@ -35,7 +35,6 @@ class RadioButton extends React.Component {
  
  render() {
     return (
-        
         <TouchableOpacity onPress={() => this._changeRadioState()}>
             <View style={[{
                 height: 24,
@@ -72,14 +71,14 @@ class RadioControl extends React.Component {
     this._renderRadioBtn = this._renderRadioBtn.bind(this)
   }
   static defaultProps = {
-      radio_props: [],
+      radio_props: [1,2,3,4],
       index_active: 0,
   }
  
 _radioButtonPress(index){
    
    this.setState({is_active_at_index: index}, function () {
-    this.setState({})
+    this.forceUpdate();
     });
 }
 
